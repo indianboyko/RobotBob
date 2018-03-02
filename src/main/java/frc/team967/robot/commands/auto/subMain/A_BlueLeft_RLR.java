@@ -16,12 +16,10 @@ public class A_BlueLeft_RLR extends CommandGroup {
     public A_BlueLeft_RLR() {
     	
     	addSequential(new AutoStartUpResets());
-    	
-    	addSequential(new DriveStright(105 * 11.5, .6));
-    	addSequential(new GyroPIDTurnToAngle(-90));
-    	addSequential(new DriveStright(105 * 3, .6));
-    	addSequential(new GyroPIDTurnToAngle(90));
-    	addSequential(new DriveStright(105 * 3, .6));
+
+        addSequential(new DriveStright(97 * 27.5, .5));
+        addSequential(new GyroPIDTurnToAngle(90));
+        addSequential(new DriveStright(97 * 3, .5));
     	
     	addSequential(new AutoEndResets());
     	

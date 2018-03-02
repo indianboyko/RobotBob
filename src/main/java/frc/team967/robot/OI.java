@@ -72,13 +72,13 @@ public class OI {
 		
     	//Setting the button variables to the commands for controller number 0
     	xbox0povN.whenPressed(new GyroPIDTurnToAngle(0));
-    	xbox0povNE.whenPressed(new GyroPIDTurnToAngle(45));
+//    	xbox0povNE.whenPressed(new GyroPIDTurnToAngle(45));
     	xbox0povE.whenPressed(new GyroPIDTurnToAngle(90));
-    	xbox0povSE.whenPressed(new GyroPIDTurnToAngle(135));
+//    	xbox0povSE.whenPressed(new GyroPIDTurnToAngle(135));
     	xbox0povS.whenPressed(new GyroPIDTurnToAngle(180));
-    	xbox0povSW.whenPressed(new GyroPIDTurnToAngle(225));
-    	xbox0povW.whenPressed(new GyroPIDTurnToAngle(270));
-    	xbox0povNW.whenPressed(new GyroPIDTurnToAngle(315));
+//    	xbox0povSW.whenPressed(new GyroPIDTurnToAngle(-135));
+    	xbox0povW.whenPressed(new GyroPIDTurnToAngle(-90));
+//    	xbox0povNW.whenPressed(new GyroPIDTurnToAngle(-45));
 //     	xbox0_lT.whenPressed();
 //     	xbox0_lT.whenReleased();
 //     	xbox0_rT.whenPressed();

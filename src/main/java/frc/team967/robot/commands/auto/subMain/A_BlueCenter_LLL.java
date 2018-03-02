@@ -3,6 +3,7 @@ package frc.team967.robot.commands.auto.subMain;
 import frc.team967.robot.commands.DriveStright;
 import frc.team967.robot.commands.GyroPIDChangeState;
 import frc.team967.robot.commands.GyroPIDTurnToAngle;
+import frc.team967.robot.commands.ZeroEncodersDriveBase;
 import frc.team967.robot.commands.auto.AutoEndResets;
 import frc.team967.robot.commands.auto.AutoStartUpResets;
 
@@ -17,17 +18,18 @@ public class A_BlueCenter_LLL extends CommandGroup {
     	
     	addSequential(new AutoStartUpResets());
 
-    	addSequential(new DriveStright(-1000,1));
-    	
-//    	addSequential(new DriveStright(105 * 4.5, .6));
-//    	addSequential(new GyroPIDTurnToAngle(-90));
-//    	addSequential(new DriveStright(105 * 3.3, .6));
-//    	addSequential(new GyroPIDTurnToAngle(90));
-    	
-//    	addSequential(new LiftMove());
-    	
-    	addSequential(new DriveStright(105 * 4, .6));
-    	
+    	addSequential(new DriveStright(200,.5));
+
+    	addSequential(new ZeroEncodersDriveBase());
+
+        addSequential(new GyroPIDTurnToAngle(90));
+
+    	addSequential(new DriveStright(100, .6));
+
+    	addSequential(new ZeroEncodersDriveBase());
+
+        addSequential(new GyroPIDTurnToAngle(270));
+
     	addSequential(new AutoEndResets());
    
         // Add Commands here:

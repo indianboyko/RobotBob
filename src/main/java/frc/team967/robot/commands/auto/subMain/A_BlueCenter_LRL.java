@@ -14,19 +14,26 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class A_BlueCenter_LRL extends CommandGroup {
 
     public A_BlueCenter_LRL() {
-    	
-    	addSequential(new AutoStartUpResets());
-    	
-    	addSequential(new DriveStright(105 * 4.5, .6));
-    	addSequential(new GyroPIDTurnToAngle(-90));
-    	addSequential(new DriveStright(105 * 3.3, .6));
-    	addSequential(new GyroPIDTurnToAngle(90));
-    	
-//    	addSequential(new LiftMove());
-    	
-    	addSequential(new DriveStright(105 * 4, .6));
-    	
-    	addSequential(new AutoEndResets());
+
+        addSequential(new AutoStartUpResets());
+
+        addSequential(new DriveStright(400,.5));
+
+        addSequential(new ZeroEncodersDriveBase());
+
+        addSequential(new GyroPIDTurnToAngle(-90));
+
+        addSequential(new DriveStright(600, .5));
+
+        addSequential(new ZeroEncodersDriveBase());
+
+        addSequential(new GyroPIDTurnToAngle(0));
+
+        addSequential(new DriveStright(800, .5));
+
+        addSequential(new ZeroEncodersDriveBase());
+
+        addSequential(new AutoEndResets());
     	
         // Add Commands here:
         // e.g. addSequential(new Command1());

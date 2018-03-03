@@ -308,8 +308,7 @@ public class DriveBaseSubsystem extends Subsystem implements PIDOutput{
     	gyro.zeroYaw();
     }
     
-	public double getLeftEncoder(){
-		return -driveLeftLead.getSensorCollection().getQuadraturePosition();
+	public double getLeftEncoder(){ return -driveLeftLead.getSensorCollection().getQuadraturePosition();
 	}
 	public double getRightEncoder(){
 		return driveRightLead.getSensorCollection().getQuadraturePosition();

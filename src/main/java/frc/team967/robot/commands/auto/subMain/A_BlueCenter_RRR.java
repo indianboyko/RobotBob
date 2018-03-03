@@ -3,6 +3,7 @@ package frc.team967.robot.commands.auto.subMain;
 import frc.team967.robot.commands.DriveStright;
 import frc.team967.robot.commands.GyroPIDTurnToAngle;
 import frc.team967.robot.commands.GyroPIDTurnToAngle;
+import frc.team967.robot.commands.ZeroEncodersDriveBase;
 import frc.team967.robot.commands.auto.AutoEndResets;
 import frc.team967.robot.commands.auto.AutoStartUpResets;
 
@@ -15,19 +16,26 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class A_BlueCenter_RRR extends CommandGroup {
 
     public A_BlueCenter_RRR() {
-    	
-    	addSequential(new AutoStartUpResets());
-    	
-    	addSequential(new DriveStright(105 * 4.5, .6));
-    	addSequential(new GyroPIDTurnToAngle(-90));
-    	addSequential(new DriveStright(105 * 3.3, .6));
-    	addSequential(new GyroPIDTurnToAngle(90));
-    	
-//    	addSequential(new LiftMove());
-    	
-    	addSequential(new DriveStright(105 * 4, .6));
-    	
-    	addSequential(new AutoEndResets());
+
+        addSequential(new AutoStartUpResets());
+
+        addSequential(new DriveStright(400,.5));
+
+        addSequential(new ZeroEncodersDriveBase());
+
+        addSequential(new GyroPIDTurnToAngle(90));
+
+        addSequential(new DriveStright(600, .5));
+
+        addSequential(new ZeroEncodersDriveBase());
+
+        addSequential(new GyroPIDTurnToAngle(0));
+
+        addSequential(new DriveStright(800, .5));
+
+        addSequential(new ZeroEncodersDriveBase());
+
+        addSequential(new AutoEndResets());
     	
         // Add Commands here:
         // e.g. addSequential(new Command1());

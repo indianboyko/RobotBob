@@ -19,12 +19,12 @@ public class RobotMap {
 	public static final int driveRightFollow = 1;	
 	*/
 	
-	public static final int driveLeftLead = 12;
-	public static final int driveLeftFollow = 13;
+	public static final int driveLeftLead = 13;
+	public static final int driveLeftFollow = 12;
 	public static final int driveLeftFollowTwo = 14;
 	public static final int driveRightLead = 3;
-	public static final int driveRightFollow = 15;	
-	public static final int driveRightFollowTwo = 2;
+	public static final int driveRightFollow = 2;
+	public static final int driveRightFollowTwo = 15;
 	
 	
 	// Lift Subsystem

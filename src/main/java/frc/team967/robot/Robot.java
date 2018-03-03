@@ -1,5 +1,6 @@
 package frc.team967.robot;
 
+import edu.wpi.first.wpilibj.DriverStation;
 import frc.team967.robot.commands.auto.A_BlueCenter;
 import frc.team967.robot.commands.auto.A_BlueLeft;
 import frc.team967.robot.commands.auto.A_BlueRight;
@@ -165,6 +166,7 @@ public class Robot extends TimedRobot {
 		kDriveBaseSubsystem.log();
 		kLiftSubsystem.log();
 		SmartDashboard.putNumber("Voltage", RobotController.getBatteryVoltage());
+		SmartDashboard.putNumber("timer", DriverStation.getInstance().getMatchTime());
 	}
 	
 }

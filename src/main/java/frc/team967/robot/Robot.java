@@ -91,6 +91,8 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void autonomousInit() {
+	    kDriveBaseSubsystem.gyroZero();
+
 		String command = SmartDashboard.getString("autonomous/selected", "Default Auto");
 		switch(command) {
 			case "Blue Left":

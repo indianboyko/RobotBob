@@ -1,6 +1,7 @@
 package frc.team967.robot.commands.auto;
 
 import frc.team967.robot.commands.GyroPIDChangeState;
+import frc.team967.robot.commands.ResetYaw;
 import frc.team967.robot.commands.ZeroEncodersDriveBase;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
@@ -14,6 +15,7 @@ public class AutoStartUpResets extends CommandGroup {
     public AutoStartUpResets() {
     	
     	addSequential(new GyroPIDChangeState("Enable"));
+//    	addSequential(new ResetYaw());
     	addSequential(new ZeroEncodersDriveBase());
     	
         // Add Commands here:

@@ -18,14 +18,17 @@ public class A_BlueCenter extends CommandGroup {
 
     public A_BlueCenter() {
     	
-    	MatchData.OwnedSide positionOne = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
-    	MatchData.OwnedSide positionTwo = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
-    	MatchData.OwnedSide positionThree = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
-    	
+//    	MatchData.OwnedSide positionOne = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
+//    	MatchData.OwnedSide positionTwo = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
+//    	MatchData.OwnedSide positionThree = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
+//
 //    	SmartDashboard.putBoolean("is in blue Center", true);
+		addSequential(new AutoStartUpResets());
 
 		addSequential(new GyroPIDTurnToAngle(40));
 		addSequential(new DriveStright(1100,.5));
+
+		addSequential(new AutoEndResets());
 
 //    	if (positionOne == MatchData.OwnedSide.LEFT && positionTwo == MatchData.OwnedSide.LEFT && positionThree == MatchData.OwnedSide.LEFT) {
 //        	addSequential(new A_BlueCenter_LLL());

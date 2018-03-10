@@ -1,16 +1,8 @@
 package frc.team967.robot;
 
-import frc.team967.lib.util.AxisButton;
+//import frc.team967.lib.util.AxisButton;
 import frc.team967.lib.util.POVButton;
-import frc.team967.robot.commands.GyroPIDTurnToAngle;
-import frc.team967.robot.commands.IntakeArms;
-import frc.team967.robot.commands.IntakePower;
-import frc.team967.robot.commands.IntakeWrist;
-import frc.team967.robot.commands.LiftMove;
-import frc.team967.robot.commands.ResetYaw;
-import frc.team967.robot.commands.ShiftLift;
-import frc.team967.robot.commands.T_ArcadeDrive;
-import frc.team967.robot.commands.ZeroEncodersDriveBase;
+import frc.team967.robot.commands.*;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -19,8 +11,8 @@ public class OI {
 	private Joystick xbox0 = new Joystick(0);
 	private Joystick xbox1 = new Joystick(1);
 	
-	public AxisButton xbox0_lT = new AxisButton(xbox0, 2, .75, 1);
-    public AxisButton xbox0_rT = new AxisButton(xbox0, 3, .75, 1);
+//	public AxisButton xbox0_lT = new AxisButton(xbox0, 2, .75, 1);
+//  public AxisButton xbox0_rT = new AxisButton(xbox0, 3, .75, 1);
     
     public POVButton xbox0povC 	= new POVButton(xbox0, 0, -1);
     public POVButton xbox0povN 	= new POVButton(xbox0, 0, 0);
@@ -32,9 +24,9 @@ public class OI {
     public POVButton xbox0povW 	= new POVButton(xbox0, 0, 270);
     public POVButton xbox0povNW = new POVButton(xbox0, 0, 315);
     
-    public AxisButton xbox1_lT = new AxisButton(xbox1, 2, .75, 1);
-    public AxisButton xbox1_rT = new AxisButton(xbox1, 3, .75, 1);
-    
+//    public AxisButton xbox1_lT = new AxisButton(xbox1, 2, .75, 1);
+//    public AxisButton xbox1_rT = new AxisButton(xbox1, 3, .75, 1);
+
     public POVButton xbox1povC 	= new POVButton(xbox1, 0, -1);
     public POVButton xbox1povN 	= new POVButton(xbox1, 0, 0);
     public POVButton xbox1povNE = new POVButton(xbox1, 0, 45);
@@ -71,13 +63,13 @@ public class OI {
     	JoystickButton xbox1_rightStickButton = new JoystickButton(xbox1, 10);
 		
     	//Setting the button variables to the commands for controller number 0
-    	xbox0povN.whenPressed(new GyroPIDTurnToAngle(0));
+//    	xbox0povN.whenPressed(new GyroPIDTurnToAngle(0));
 //    	xbox0povNE.whenPressed(new GyroPIDTurnToAngle(45));
-    	xbox0povE.whenPressed(new GyroPIDTurnToAngle(90));
+//    	xbox0povE.whenPressed(new GyroPIDTurnToAngle(90));
 //    	xbox0povSE.whenPressed(new GyroPIDTurnToAngle(135));
-    	xbox0povS.whenPressed(new GyroPIDTurnToAngle(180));
+//    	xbox0povS.whenPressed(new GyroPIDTurnToAngle(180));
 //    	xbox0povSW.whenPressed(new GyroPIDTurnToAngle(-135));
-    	xbox0povW.whenPressed(new GyroPIDTurnToAngle(-90));
+//    	xbox0povW.whenPressed(new GyroPIDTurnToAngle(-90));
 //    	xbox0povNW.whenPressed(new GyroPIDTurnToAngle(-45));
 //     	xbox0_lT.whenPressed();
 //     	xbox0_lT.whenReleased();
@@ -88,9 +80,9 @@ public class OI {
     	xbox0_b.whenPressed(new ResetYaw());
 //    	xbox0_b.whenPressed();
 //    	xbox0_b.whenReleased();
-//    	xbox0_x.whenPressed(new IntakeArms("open"));
+    	xbox0_x.whenPressed(new BusterBrake("enabled"));
 ////    	xbox0_x.whenReleased();
-    	xbox0_y.whenPressed(new ZeroEncodersDriveBase());
+    	xbox0_y.whenPressed(new BusterBrake("disabled"));
 //    	xbox0_y.whenReleased();
 //     	xbox0_lb.whenPressed(new ShiftLift("high"));
 //    	xbox0_rb.whenPressed(new ShiftLift("low"));
@@ -111,16 +103,16 @@ public class OI {
 //     	xbox1_lT.whenReleased();
 //     	xbox1_rT.whenPressed();
 //     	xbox1_rT.whenReleased();
-//    	xbox1_a.whenPressed(new IntakeWrist());
+    	xbox1_a.whenPressed(new ShiftLift("high"));
 //    	xbox1_a.whenReleased();
-//    	xbox1_b.whenPressed(new IntakePower());
+    	xbox1_b.whenPressed(new ShiftLift("low"));
 //    	xbox1_b.whenReleased();
-    	xbox1_x.whenPressed(new IntakeArms("open"));
+//    	xbox1_x.whenPressed(new IntakeArms("open"));
 //    	xbox0_x.whenReleased();
-    	xbox1_y.whenPressed(new IntakeArms("closed"));
+//    	xbox1_y.whenPressed(new IntakeArms("closed"));
 //    	xbox1_y.whenReleased();
-     	xbox1_lb.whenPressed(new ShiftLift("high"));
-    	xbox1_rb.whenPressed(new ShiftLift("low"));
+     	xbox1_lb.whenPressed(new IntakeArms("closed"));
+    	xbox1_rb.whenPressed(new IntakeArms("open"));
 //    	xbox1_rb.whenReleased();
     	xbox1_back.whenPressed(new LiftMove());
 //    	xbox1_back.whenReleased();

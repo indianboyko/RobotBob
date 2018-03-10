@@ -121,10 +121,10 @@ public class Robot extends TimedRobot {
 		
 //		m_autonomousCommand = m_chooser.getSelected();
 		
-		// schedule the autonomous command (example)
-		if (m_autonomousCommand != null) {
-			m_autonomousCommand.start();
-		}
+//		// schedule the autonomous command (example)
+//		if (m_autonomousCommand != null) {
+//			m_autonomousCommand.start();
+//		}
 	}
 
 	/**

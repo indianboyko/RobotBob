@@ -40,7 +40,8 @@ public class LiftSubsystem extends Subsystem {
     	liftLead.setSensorPhase(false);
     	
     	liftFollow.follow(liftLead);
-    	
+    	liftFollow.setInverted(true);
+
     	limitSwitchTop = new DigitalInput(RobotMap.limitSwitchTop);
     	limitSwitchBottom = new DigitalInput(RobotMap.limitSwitchBottom);
     	

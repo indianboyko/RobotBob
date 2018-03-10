@@ -21,7 +21,7 @@ public class IntakeSubsystem extends Subsystem {
 	public double Position = 0;
 	
 	public IntakeSubsystem() {
-		leftIntake = new WPI_TalonSRX(RobotMap.leftIntake);
+//		leftIntake = new WPI_TalonSRX(RobotMap.leftIntake);
 		rightIntake = new WPI_TalonSRX(RobotMap.rightIntake);
 		
 		armShifter = new DoubleSolenoid(RobotMap.pcm, RobotMap.armOpen,RobotMap.armClosed);
@@ -29,7 +29,7 @@ public class IntakeSubsystem extends Subsystem {
 	
 	public void intakePower(double power) {
 		rightIntake.set(power);
-		leftIntake.set(-power);
+//		leftIntake.set(-power);
 	}
 	
 	public void armShifterOpen() {

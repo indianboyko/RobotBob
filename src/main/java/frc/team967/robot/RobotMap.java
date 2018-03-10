@@ -19,12 +19,12 @@ public class RobotMap {
 	public static final int driveRightFollow = 1;	
 	*/
 	
-	public static final int driveLeftLead = 13;
-	public static final int driveLeftFollow = 12;
-	public static final int driveLeftFollowTwo = 14;
-	public static final int driveRightLead = 3;
-	public static final int driveRightFollow = 2;
-	public static final int driveRightFollowTwo = 15;
+	public static final int driveLeftLead = 9;
+	public static final int driveLeftFollow = 10;
+	public static final int driveLeftFollowTwo = 11;
+	public static final int driveRightLead = 7;
+	public static final int driveRightFollow = 8;
+	public static final int driveRightFollowTwo = 6;
 	
 	
 	// Lift Subsystem
@@ -33,17 +33,17 @@ public class RobotMap {
 	public static final int limitSwitchTop = 1;
 	public static final int limitSwitchBottom = 2;
 	
-	public static final int liftHigh = 6;
-	public static final int liftLow = 1;
+	public static final int liftHigh = 5;
+	public static final int liftLow = 2;
 	
-	public static final int busterBrakeIn = 5;
-	public static final int busterBrakeOut = 2;
+	public static final int busterBrakeIn = 0;
+	public static final int busterBrakeOut = 7;
 	
 	//Intake
-	public static final int leftIntake = 30;
-	public static final int rightIntake = 20;
-	public static final int armOpen = 7;
-	public static final int armClosed = 0;
+//	public static final int leftIntake = 3;
+	public static final int rightIntake = 2;
+	public static final int armOpen = 1;
+	public static final int armClosed = 6;
 	
 	//Wrist
 	public static final int wrist = 1;

@@ -3,9 +3,9 @@ package frc.team967.robot;
 public class RobotConstraints {
 
 	public static final double DriveSubsystem_deadBand = .15;
-	public static final double DriveSubsystem_kP = .015; //0.0135; // 0.0015
+	public static final double DriveSubsystem_kP = .015; //.015; //0.0135; // 0.0015
 	public static final double DriveSubsystem_kI = 0;
-	public static final double DriveSubsystem_kD = 0.0337; //0.015; // .055
+	public static final double DriveSubsystem_kD = .055;//0.0337; //0.015; // .055
 	public static final double DriveSubsystem_kToleranceDegrees = 2.0f;
 	
 //	public static final double LiftSubsystem_kP = 0;

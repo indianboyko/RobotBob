@@ -15,7 +15,7 @@ public class A_DriveForward extends CommandGroup {
     	
     	addSequential(new AutoStartUpResets());
     	
-    	addSequential(new DriveStright(3000,.5));
+    	addSequential(new DriveStright(1100,.5));
     	
     	addSequential(new AutoEndResets());
     	

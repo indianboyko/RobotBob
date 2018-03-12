@@ -96,7 +96,7 @@ public class LiftSubsystem extends Subsystem {
     	SmartDashboard.putNumber("LiftAmpsLead", liftLead.getOutputCurrent());
     	SmartDashboard.putNumber("LiftAmpsFollow", liftFollow.getOutputCurrent());
     	
-    	
+    	SmartDashboard.putBoolean("limmit botom", IsBottom());
     }
 }
 

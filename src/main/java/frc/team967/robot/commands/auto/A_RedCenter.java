@@ -19,6 +19,7 @@ public class A_RedCenter extends CommandGroup {
 
 		addSequential(new AutoStartUpResets());
 
+		addSequential(new DriveStright(100,.5));
 		addSequential(new GyroPIDTurnToAngle(40));
 		addSequential(new DriveStright(1100,.5));
 

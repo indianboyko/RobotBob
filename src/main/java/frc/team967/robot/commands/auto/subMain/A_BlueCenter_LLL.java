@@ -18,19 +18,19 @@ public class A_BlueCenter_LLL extends CommandGroup {
     	
     	addSequential(new AutoStartUpResets());
 
-    	addSequential(new DriveStright(500,.5));
+    	addSequential(new DriveStright(400,.5));
 
     	addSequential(new ZeroEncodersDriveBase());
 //
-        addSequential(new GyroPIDTurnToAngle(-90));
+        addSequential(new GyroPIDTurnToAngle(-60));
 //
-    	addSequential(new DriveStright(950, .5));
+    	addSequential(new DriveStright(1000, .5));
 //
     	addSequential(new ZeroEncodersDriveBase());
 //
         addSequential(new GyroPIDTurnToAngle(0));
 //
-        addSequential(new DriveStright(1350, .5));
+        addSequential(new DriveStright(1400, .5));
 //
         addSequential(new ZeroEncodersDriveBase());
 //

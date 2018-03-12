@@ -25,8 +25,9 @@ public class A_BlueCenter extends CommandGroup {
 //    	SmartDashboard.putBoolean("is in blue Center", true);
 		addSequential(new AutoStartUpResets());
 
+		addSequential(new DriveStright(100,.5));
 		addSequential(new GyroPIDTurnToAngle(40));
-		addSequential(new DriveStright(1100,.5));
+		addSequential(new DriveStright(1200,.5));
 
 		addSequential(new AutoEndResets());
 

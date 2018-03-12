@@ -113,7 +113,7 @@ public class Robot extends TimedRobot {
 			case "Red Right":
 				m_autonomousCommand = new A_RedRight();
 				break;
-			case "Default Auto":
+			case "Drive Forward":
 			default:
 				m_autonomousCommand = new A_DriveForward();
 		}
@@ -122,9 +122,9 @@ public class Robot extends TimedRobot {
 //		m_autonomousCommand = m_chooser.getSelected();
 		
 //		// schedule the autonomous command (example)
-//		if (m_autonomousCommand != null) {
-//			m_autonomousCommand.start();
-//		}
+		if (m_autonomousCommand != null) {
+			m_autonomousCommand.start();
+		}
 	}
 
 	/**

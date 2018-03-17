@@ -1,5 +1,6 @@
 package frc.team967.robot.subsystems;
 
+import frc.team967.robot.Robot;
 import frc.team967.robot.RobotConstraints;
 import frc.team967.robot.RobotMap;
 import frc.team967.robot.commands.LiftMove;
@@ -64,10 +65,17 @@ public class LiftSubsystem extends Subsystem {
     		return liftLead.getSensorCollection().getQuadraturePosition();
     	}
     }
-    
+
     public void moveLift(double power) {
-    	liftLead.set(power);
-//    	liftFollow.set(power);
+        if (!IsBottom()){
+            liftLead.set(power);
+        }
+        else if (power > 0) {
+            liftLead.set(power);
+        }
+        else if (power < 0) {
+            liftLead.set(power);
+        }
     }
     
     public void shiftLift(String position) {

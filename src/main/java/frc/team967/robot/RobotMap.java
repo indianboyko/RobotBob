@@ -26,7 +26,7 @@ public class RobotMap {
 	public static final int driveRightFollowTwo = 8;
 
 	// Lift Subsystem
-	public static final int liftLead = 40;
+	public static final int liftLead = 9;
 	public static final int liftFollow = 50;
 
 	public static final int limitSwitchTop = 1;

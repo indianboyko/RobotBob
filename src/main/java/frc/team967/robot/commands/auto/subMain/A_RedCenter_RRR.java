@@ -18,22 +18,22 @@ public class A_RedCenter_RRR extends CommandGroup {
 
         addSequential(new AutoStartUpResets());
 
-        addSequential(new DriveStright(400,.5));
+        addSequential(new DriveStright(390*4,.1));
 
         addSequential(new ZeroEncodersDriveBase());
-
-        addSequential(new GyroPIDTurnToAngle(-90));
-
-        addSequential(new DriveStright(600, .5));
-
+//
+        addSequential(new GyroPIDTurnToAngle(60));
+//
+        addSequential(new DriveStright(390*6, .1));
+//
         addSequential(new ZeroEncodersDriveBase());
-
+//
         addSequential(new GyroPIDTurnToAngle(0));
-
-        addSequential(new DriveStright(800, .5));
-
+//
+        addSequential(new DriveStright(390*4, .1));
+//
         addSequential(new ZeroEncodersDriveBase());
-
+//
         addSequential(new AutoEndResets());
     	
         // Add Commands here:

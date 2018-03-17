@@ -11,17 +11,23 @@ public class RobotMap {
 	public static final int pcm = 1;
 	
 	// Drive Subsystem
-	public static final int driveLeftLead = 10;
-	public static final int driveLeftFollow = 9;
-	public static final int driveLeftFollowTwo = 11;
-	public static final int driveRightLead = 7;
-	public static final int driveRightFollow = 8;
-	public static final int driveRightFollowTwo = 6;
-	
-	
+//	public static final int driveLeftLead = 10;
+//	public static final int driveLeftFollow = 9;
+//	public static final int driveLeftFollowTwo = 11;
+//	public static final int driveRightLead = 7;
+//	public static final int driveRightFollow = 8;
+//	public static final int driveRightFollowTwo = 6;
+//
+	public static final int driveLeftLead = 3;
+	public static final int driveLeftFollow = 4;
+	public static final int driveLeftFollowTwo = 5;
+	public static final int driveRightLead = 6;
+	public static final int driveRightFollow = 7;
+	public static final int driveRightFollowTwo = 8;
+
 	// Lift Subsystem
-	public static final int liftLead = 4;
-	public static final int liftFollow = 5;
+	public static final int liftLead = 40;
+	public static final int liftFollow = 50;
 
 	public static final int limitSwitchTop = 1;
 	public static final int limitSwitchBottom = 0;

@@ -19,7 +19,7 @@ public class A_BlueLeft extends CommandGroup {
 
 		addSequential(new AutoStartUpResets());
 
-		addSequential(new DriveStright(1100,.5));
+		addSequential(new DriveStright(390* 9,.5));
 
 		addSequential(new AutoEndResets());
 

@@ -9,10 +9,18 @@ import edu.wpi.first.wpilibj.command.Command;
  */
 public class LiftMove extends Command {
 
-    public LiftMove() {
+    double Power = 0;
+
+    public LiftMove(double power) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires(Robot.kLiftSubsystem);
+        Power = power;
+    }
+    public LiftMove() {
+        // Use requires() here to declare subsystem dependencies
+        // eg. requires(chassis);
+        requires(Robot.kLiftSubsystem);
     }
 
     // Called just before this Command runs the first time

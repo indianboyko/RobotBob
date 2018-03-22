@@ -92,6 +92,7 @@ public class Robot extends TimedRobot {
 	@Override
 	public void autonomousInit() {
 	    kDriveBaseSubsystem.gyroZero();
+		Robot.kLiftSubsystem.shiftLift("high");
 
 		String command = SmartDashboard.getString("autonomous/selected", "Default Auto");
 		switch(command) {
@@ -143,8 +144,8 @@ public class Robot extends TimedRobot {
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
 		if (m_autonomousCommand != null) {
-			m_autonomousCommand.cancel();
-		}
+            m_autonomousCommand.cancel();
+        }
 	}
 
 	/**

@@ -11,12 +11,12 @@ public class LiftMove extends Command {
 
     double Power = 0;
 
-    public LiftMove(double power) {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
-    	requires(Robot.kLiftSubsystem);
-        Power = power;
-    }
+//    public LiftMove(double power) {
+//        // Use requires() here to declare subsystem dependencies
+//        // eg. requires(chassis);
+//    	requires(Robot.kLiftSubsystem);
+//        Power = power;
+//    }
     public LiftMove() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);

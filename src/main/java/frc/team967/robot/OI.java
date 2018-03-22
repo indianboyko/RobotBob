@@ -75,7 +75,7 @@ public class OI {
 //     	xbox0_lT.whenReleased();
 //     	xbox0_rT.whenPressed();
 //     	xbox0_rT.whenReleased();
-    	xbox0_a.whenPressed(new T_ArcadeDrive());
+//    	xbox0_a.whenPressed(new liftMoveInAuto(.3));
 //    	xbox0_a.whenReleased();
     	xbox0_b.whenPressed(new ResetYaw());
 //    	xbox0_b.whenPressed();

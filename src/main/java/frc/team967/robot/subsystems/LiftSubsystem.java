@@ -54,14 +54,13 @@ public class LiftSubsystem extends Subsystem {
     public boolean IsBottom() { return limitSwitchBottom.get(); }
     
     public double Position() {
-    	if (IsTop() == true) {
-    		return 100;
-    	}
-    	else if (IsBottom() == true) {
-    		liftLead.getSensorCollection().setQuadraturePosition(0, 0);
-    		return 0;
+    	if (limitSwitchBottom.get()) {
+    		liftLead.getSensorCollection().setQuadraturePosition(0, 5);
+            SmartDashboard.putBoolean("PositionInit", true);
+    		return liftLead.getSensorCollection().getQuadraturePosition();
     	}
     	else {
+            SmartDashboard.putBoolean("PositionInit", false);
     		return liftLead.getSensorCollection().getQuadraturePosition();
     	}
     }
@@ -99,12 +98,14 @@ public class LiftSubsystem extends Subsystem {
 	}
     
     public void log() {
-    	SmartDashboard.putNumber("Lift position", liftLead.getSelectedSensorPosition(0));
+    	SmartDashboard.putNumber("Lift position", Position());
     	SmartDashboard.putNumber("Lift Velocity", liftLead.getSelectedSensorVelocity(0));
     	SmartDashboard.putNumber("LiftAmpsLead", liftLead.getOutputCurrent());
     	SmartDashboard.putNumber("LiftAmpsFollow", liftFollow.getOutputCurrent());
     	
     	SmartDashboard.putBoolean("limmit botom", IsBottom());
+
+    	SmartDashboard.putNumber("LIFT Encoder", liftLead.getSensorCollection().getQuadraturePosition());
     }
 }
 

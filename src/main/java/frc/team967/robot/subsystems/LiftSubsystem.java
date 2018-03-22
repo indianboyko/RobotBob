@@ -67,11 +67,11 @@ public class LiftSubsystem extends Subsystem {
     }
 
     public void moveLift(double power) {
-        if (!IsBottom()){
+        if (!Robot.kLiftSubsystem.IsBottom()){
             liftLead.set(power);
         }
         else if (power > 0) {
-            liftLead.set(power);
+            liftLead.set(0);
         }
         else if (power < 0) {
             liftLead.set(power);

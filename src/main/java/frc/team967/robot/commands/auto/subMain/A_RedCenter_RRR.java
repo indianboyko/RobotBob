@@ -19,6 +19,8 @@ public class A_RedCenter_RRR extends CommandGroup {
 
         addSequential(new AutoStartUpResets());
 
+        addSequential(new IntakeArms("closed"));
+
         addSequential(new DriveStright(390*2,.5));
 
         addSequential(new ZeroEncodersDriveBase());

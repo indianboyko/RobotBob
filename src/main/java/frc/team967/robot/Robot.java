@@ -97,13 +97,13 @@ public class Robot extends TimedRobot {
 		String command = SmartDashboard.getString("autonomous/selected", "Default Auto");
 		switch(command) {
 			case "Blue Left":
-				m_autonomousCommand = new A_BlueLeft();
+				m_autonomousCommand = new A_RedLeft();
 				break;
 			case "Blue Center":
-				m_autonomousCommand = new A_BlueCenter();
+				m_autonomousCommand = new A_RedCenter();
 				break;
 			case "Blue Right":
-				m_autonomousCommand = new A_BlueRight();
+				m_autonomousCommand = new A_RedRight();
 				break;
 			case "Red Left":
 				m_autonomousCommand = new A_RedLeft();

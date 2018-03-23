@@ -16,9 +16,10 @@ public class A_RedRight_RLR extends CommandGroup {
     public A_RedRight_RLR() {
     	
     	addSequential(new AutoStartUpResets());
-    	
-    	addSequential(new DriveStright(105 * 11.5, .6));
-    	addSequential(new GyroPIDTurnToAngle(-30));
+
+        addSequential(new DriveStright(390 * 12, .5));
+        addSequential(new GyroPIDTurnToAngle(-90));
+        addSequential(new DriveStright(390 * 3, .5));
     	
     	addSequential(new AutoEndResets());
     	

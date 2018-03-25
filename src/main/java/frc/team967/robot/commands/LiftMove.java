@@ -31,7 +31,7 @@ public class LiftMove extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
         double Power = Robot.m_oi.getXbox1().getRawAxis(1);
-        Robot.kLiftSubsystem.moveLift(Power);
+        Robot.kLiftSubsystem.moveLift(-Power);
     }
 
     // Make this return true when this Command no longer needs to run execute()

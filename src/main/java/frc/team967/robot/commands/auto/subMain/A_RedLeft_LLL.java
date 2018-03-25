@@ -1,8 +1,6 @@
 package frc.team967.robot.commands.auto.subMain;
 
-import frc.team967.robot.commands.DriveStright;
-import frc.team967.robot.commands.GyroPIDTurnToAngle;
-import frc.team967.robot.commands.IntakeArms;
+import frc.team967.robot.commands.*;
 import frc.team967.robot.commands.auto.AutoEndResets;
 import frc.team967.robot.commands.auto.AutoStartUpResets;
 
@@ -18,13 +16,21 @@ public class A_RedLeft_LLL extends CommandGroup {
     	
     	addSequential(new AutoStartUpResets());
 
-        addSequential(new IntakeArms("closed"));
+//        addSequential(new IntakeArms("closed"));
     	
-    	addSequential(new DriveStright(390 * 12, .5));
+    	addSequential(new DriveStright(390 * 23, 1));
 
-    	addSequential(new GyroPIDTurnToAngle(90));
+    	addSequential(new GyroPIDTurnToAngle(45));
 
         addSequential(new DriveStright(390 * 3, .5));
+
+        addSequential(new MoveWrist(.5));
+
+        addSequential(new MoveLift(4));
+
+        addSequential(new MoveWheels(4));
+
+//        addSequential(new IntakeArms("open"));
 
     	addSequential(new AutoEndResets());
     	

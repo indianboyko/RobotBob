@@ -18,15 +18,9 @@ public class A_RedLeft_RRR extends CommandGroup {
     	
     	addSequential(new AutoStartUpResets());
 
-        addSequential(new IntakeArms("closed"));
+//        addSequential(new IntakeArms("closed"));
 
-        addSequential(new DriveStright(390 * 27, .5));
-
-        addSequential(new GyroPIDTurnToAngle(90));
-
-        addSequential(new DriveStright(390 * 3, .5));
-
-        addSequential(new IntakeArms("open"));
+        addSequential(new DriveStright(390 * 9, .5));
 
     	addSequential(new AutoEndResets());
     	

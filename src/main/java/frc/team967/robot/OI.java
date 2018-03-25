@@ -114,9 +114,9 @@ public class OI {
      	xbox1_lb.whenPressed(new IntakeArms("closed"));
     	xbox1_rb.whenPressed(new IntakeArms("open"));
 //    	xbox1_rb.whenReleased();
-    	xbox1_back.whenPressed(new LiftMove());
+//    	xbox1_back.whenPressed(new MoveWrist(.5));
 //    	xbox1_back.whenReleased();
-//    	xbox1_start.whenPressed();
+    	xbox1_start.whenPressed(new MoveWheels(5));
 //    	xbox1_start.whenReleased();
     	xbox1_leftStickButton.whenPressed(new LiftMove());
     	xbox1_rightStickButton.whenPressed(new IntakePower()); 	

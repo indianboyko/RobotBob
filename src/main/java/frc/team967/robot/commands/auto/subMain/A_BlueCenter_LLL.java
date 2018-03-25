@@ -1,9 +1,6 @@
 package frc.team967.robot.commands.auto.subMain;
 
-import frc.team967.robot.commands.DriveStright;
-import frc.team967.robot.commands.GyroPIDChangeState;
-import frc.team967.robot.commands.GyroPIDTurnToAngle;
-import frc.team967.robot.commands.ZeroEncodersDriveBase;
+import frc.team967.robot.commands.*;
 import frc.team967.robot.commands.auto.AutoEndResets;
 import frc.team967.robot.commands.auto.AutoStartUpResets;
 
@@ -15,26 +12,48 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 public class A_BlueCenter_LLL extends CommandGroup {
 
     public A_BlueCenter_LLL() {
-    	
-    	addSequential(new AutoStartUpResets());
 
-    	addSequential(new DriveStright(390*4,.1));
+        addSequential(new AutoStartUpResets());
 
-    	addSequential(new ZeroEncodersDriveBase());
+//        addSequential(new IntakeArms("closed"));
+
+        addSequential(new DriveStright(390*2,.5));
+
+        addSequential(new ZeroEncodersDriveBase());
 //
         addSequential(new GyroPIDTurnToAngle(-60));
 //
-    	addSequential(new DriveStright(390*6, .1));
-//
-    	addSequential(new ZeroEncodersDriveBase());
-//
-        addSequential(new GyroPIDTurnToAngle(0));
-//
-        addSequential(new DriveStright(390*4, .1));
+        addSequential(new DriveStright(390*6, .5));
 //
         addSequential(new ZeroEncodersDriveBase());
 //
-    	addSequential(new AutoEndResets());
+        addSequential(new GyroPIDTurnToAngle(0));
+//
+        addSequential(new DriveStright(390*6, .5));
+//
+        addSequential(new ZeroEncodersDriveBase());
+
+        addSequential(new IntakeArms("open"));
+
+//    	addSequential(new AutoStartUpResets());
+//
+//    	addSequential(new DriveStright(390*4,.1));
+//
+//    	addSequential(new ZeroEncodersDriveBase());
+////
+//        addSequential(new GyroPIDTurnToAngle(-60));
+////
+//    	addSequential(new DriveStright(390*6, .1));
+////
+//    	addSequential(new ZeroEncodersDriveBase());
+////
+//        addSequential(new GyroPIDTurnToAngle(0));
+////
+//        addSequential(new DriveStright(390*4, .1));
+////
+//        addSequential(new ZeroEncodersDriveBase());
+////
+//    	addSequential(new AutoEndResets());
    
         // Add Commands here:
         // e.g. addSequential(new Command1());

@@ -17,14 +17,6 @@ public class A_RedCenter extends CommandGroup {
 
     public A_RedCenter() {
 
-//		addSequential(new AutoStartUpResets());
-//
-//		addSequential(new DriveStright(100,.5));
-//		addSequential(new GyroPIDTurnToAngle(40));
-//		addSequential(new DriveStright(1100,.5));
-//
-//		addSequential(new AutoEndResets());
-
     	MatchData.OwnedSide positionOne = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);
     	MatchData.OwnedSide positionTwo = MatchData.getOwnedSide(MatchData.GameFeature.SCALE);
     	MatchData.OwnedSide positionThree = MatchData.getOwnedSide(MatchData.GameFeature.SWITCH_NEAR);

@@ -48,7 +48,7 @@ public class LiftSubsystem extends Subsystem {
 
     public double Position() {
     	if (limitSwitchBottom.get()) {
-    		liftLead.getSensorCollection().setQuadraturePosition(0, 5);
+//    		liftLead.getSensorCollection().setQuadraturePosition(0, 5);
     		return liftLead.getSensorCollection().getQuadraturePosition();
     	}
     	else {

@@ -57,15 +57,17 @@ public class LiftSubsystem extends Subsystem {
     }
 
     public void moveLift(double power) {
-        if (!Robot.kLiftSubsystem.IsBottom()){
-            liftLead.set(power);
-        }
-        else if (power > 0) {
-            liftLead.set(0);
-        }
-        else if (power < 0) {
-            liftLead.set(power);
-        }
+        // if (!Robot.kLiftSubsystem.IsBottom()){
+        //     liftLead.set(power);
+        // }
+        // // else if (power > 0) {
+        //     // liftLead.set(0);
+        // }
+        // else if (power < 0) {
+			if (power > +.05 && power < -.05){
+				liftLead.set(power);
+			} 
+        // }
     }
     
     public void shiftLift(String position) {

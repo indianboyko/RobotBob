@@ -107,9 +107,9 @@ public class OI {
 //    	xbox1_a.whenReleased();
     	xbox1_b.whenPressed(new ShiftLift("low"));
 //    	xbox1_b.whenReleased();
-//    	xbox1_x.whenPressed(new IntakeArms("open"));
+   	xbox1_x.whenPressed(new IntakeArms("open"));
 //    	xbox0_x.whenReleased();
-//    	xbox1_y.whenPressed(new IntakeArms("closed"));
+   	xbox1_y.whenPressed(new IntakeArms("closed"));
 //    	xbox1_y.whenReleased();
      	xbox1_lb.whenPressed(new IntakeArms("closed"));
     	xbox1_rb.whenPressed(new IntakeArms("open"));
